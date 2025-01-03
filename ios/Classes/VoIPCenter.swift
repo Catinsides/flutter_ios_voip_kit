@@ -203,8 +203,7 @@ extension VoIPCenter: CXProviderDelegate {
         let sharedSession = AVAudioSession.sharedInstance()
         do {
             try sharedSession.setCategory(.playAndRecord,
-                                          options: [AVAudioSession.CategoryOptions.allowBluetooth,
-                                                    AVAudioSession.CategoryOptions.defaultToSpeaker])
+                                          options: [AVAudioSession.CategoryOptions.allowBluetooth])
             try sharedSession.setMode(audioSessionMode)
             try sharedSession.setPreferredIOBufferDuration(ioBufferDuration)
             try sharedSession.setPreferredSampleRate(audioSampleRate)
